@@ -1,0 +1,641 @@
+/* 借助小米的字体与颜色 */
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+}
+
+
+
+
+/* 小米顶部栏设置开始 */
+/* 顶部栏的整体设置 */
+.top{
+    width:100%;
+    height: 40px;
+    background-color: #333;
+    
+}
+/* 顶部栏清单鼠标放上去时颜色的显示 */
+.top a:hover{
+    color: #fff;
+}
+/* 对容器的整体设置 */
+.container{
+    width: 1226px;
+    height: 100%;
+    /*与网页顶部间距为0，自动居中*/
+    margin: 0 auto;
+    
+}
+/* 顶部清单内容置于容器的左边 */
+.top .toplist{
+    float: left;
+}
+/* 登录置于容器右边 */
+.top .log{
+    float:right;
+}
+/* 购物车的设定 */
+.top .shop{
+    float: right;
+    /* 没有图标与登录部分进行相隔 */
+    margin-left: 15px;
+    /* 当没有规定宽度时，会自动用内容去填充，所以设置一个宽度，看起来更舒适一些 */
+    width: 120px; ;
+    height: 40px;
+    /* line-height设置垂直居中，因为top是40px，所以这里也设置为40px */
+    line-height: 40px;
+    /* 水平设置居中 */
+    text-align: center;
+    background-color: #424242;
+}
+/* 对top中链接的设定 */
+.top a{
+    color: #b0b0b0;
+    font-size: 12px;
+    /*inline-block同时具有inline和block的特点，都在同一行且可以设置周围距离  */
+    display: inline-block;
+    /* 垂直居中 */
+    line-height: 40px;
+}
+/* 对span的设定 */
+.top span{
+    color: #424242;
+    margin: 2px;
+}
+/* 购物车栏悬浮在空白区域也能点击超链接 */
+.top .shop a{
+    width: 120px;
+    height: 40px;
+}
+/* 小米顶部栏设置结束 */
+
+
+
+
+
+/* 小米导航栏开始 */
+.navigation{
+    height: 100px;
+}
+/* 小米logo的设置 */
+.navigation .navigationlogo{
+    float: left;
+    /* 使得logo与上方有间隙*/
+    margin-top: 22px;
+}
+/*尽量使得点击整个logo都能进入链接  */
+.navigation .navigationlogo a{
+    /* 想要设置链接宽与高，最好用block才能完整设置 */
+    display: block;
+    height: 78px;
+    width: 89px;
+}
+/* 导航表单左浮动 */
+.navigation .navigationlist{
+    float: left;
+   width: 820px;
+}
+/* 设置列表整体的框架 */
+.navigation .navigationlist>ul{
+    /* 这个宽度至关重要，太小可能放不下列表的内容*/
+    width: 820px;
+    height: 88px;
+    padding: 12px 0 0 30px;
+    font-size: 16px;
+}
+/* 列表内容全部左浮动 */
+.navigation .navigationlist>ul>li{
+    float: left;
+}
+/* >表示只对儿子元素起作用，并不是对所有后代都起作用 */
+/* 对链接进行设置 */
+.navigation .navigationlist>ul>li>a{
+    display: block;
+    /* 这样子的padding表示上 左右 下 */
+    padding: 26px 10px 38px;
+    color: #333;
+}
+/* 列表鼠标悬浮颜色 */
+.navigation .navigationlist>ul>li>a:hover{
+    color: #ff6700;
+}
+/* 对gif设置 */
+.navigation .navigationlist>ul .navigationcategory>a{
+    padding: 0;
+    width: 163px;
+}
+/* 给gif设置一个相对定位 */
+.navigation .navigationlist>ul>li.navigationcategory{
+    position: relative;
+}
+/* 主页内容的侧边栏进行设置 */
+.navigation .navigationlist>ul>li.navigationcategory .categorylist{
+    /* 绝对定位使得列表跟随gif那个部分 */
+    position: absolute;
+    top: 88px;
+    left: -120px;
+    width: 234px;
+    height: 460px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /*显示优先级 */
+    z-index: 3;
+}
+/* 侧方栏整体设置 */
+.categorylist>ul{
+    width: 234px;
+    height: 420px;
+    padding: 20px 0;
+}
+/* 对侧方栏的各个li单独设置 */
+.categorylist>ul>li{
+    height: 42px;
+}
+/* 侧方栏链接设置 */
+.categorylist>ul>li>a{
+    padding-left: 30px;
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color:#fff;
+    position: relative;
+}
+.categorylist>ul>li>a:hover{
+    background-color: #ff6700;
+}
+/* 对>进行一个设置 */
+.categorylist>ul>li>a>span{
+    /* 定位在链接之后 */
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font: size 14px; ;
+    line-height: 16px;
+}
+/* 搜索框右浮动 */
+.navigation .navigationsearch{
+    float: right;
+    width: 296px;
+    margin-top: 25px;
+}
+/* 搜索框表单整体设置 */
+.navigation .navigationsearch form{
+    position: relative;
+    width: 296px;
+    height: 50px;;
+}
+/* 输入框的设置 */
+.navigation .navigationsearch form .searchtext{
+    /* 245px */
+    width: 223px;
+    height:48px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    padding: 0 10px;
+    float: left;
+}
+/* 搜索框按钮设置 */
+.navigation .navigationsearch form .searchbutton{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-left: -1px;
+}
+/* 搜索框按钮的设置 */
+.navigation .navigationsearch form .searchbutton:hover{
+    cursor: pointer;
+    color: #fff;
+    background-color: #ff6700;
+}
+/* 搜索关键字的设置 */
+.navigation .navigationsearch form .searchword{
+    /* 在表单设置一个relative就是为了让关键字放进表单中的 */
+    position: absolute;
+    font-size: 12px;
+    top: 14px;
+    right: 65px;
+}
+/* 关键字的链接设置 */
+.navigation .navigationsearch form .searchword a{
+    display: inline-block;
+    margin-left: 0px;
+    padding:0 5px;
+    background-color:#eee ;
+    color: #757575;
+}
+/* 关键字的链接鼠标悬浮设置 */
+.navigation .navigationsearch form .searchword a:hover{
+    background-color: #ff6700 ;
+    color: snow;
+}
+/* 小米导航栏结束 */
+
+
+
+
+
+/* 小米主页内容开始 */
+.homecontent .siteslider{
+    /* 使得span的内容跟随 */
+    position: relative;
+    z-index: 2;
+}
+/* 图片链接设置 */
+.homecontent .siteslider>a{
+    display: block;
+    width: 1226px;
+    height: 460px;
+}
+/* 图片设置 */
+.homecontent .siteslider>a img{
+    width: 1226px;
+}
+/* 对轮播图按钮进行设置 */
+.homecontent .siteslider>span{
+    position: absolute;
+    width: 41px;
+    height: 69px;
+    /* 按钮的图片 */
+    background:url(../images/icon-slides.png) no-repeat 0 0; 
+    top:50%;
+    margin-top: -35px;
+    cursor: pointer;
+} 
+/* 取出图片中的部分 */
+/* 上一张的图片 */
+.homecontent .siteslider span.prev{
+    /* 图片只显示83px后面的部分 */
+    background-position: -83px 0 ;
+    left: 234px;
+}
+/* 上一张的阴影图 */
+.homecontent .siteslider span.prev:hover{
+    background-position: 0 0;
+}
+/* 下一张的图片 */
+.homecontent .siteslider span.next{
+    background-position: -123px 0 ;
+    right: 0;
+}
+/* 下一张的阴影图 */
+.homecontent .siteslider span.next:hover{
+    background-position: -41px 0;
+}
+/* 给右下角的按钮的整体div进行设置 */
+.homecontent .siteslider-item{
+    /* 跟随图片 */
+    position: absolute;
+    width: 200px;
+    height:30px ;
+    
+    /* 行距 */
+    line-height: 30px;
+    /* 文本位置 */
+    text-align: right;
+    bottom: 20px;
+    right: 40px;
+}
+/* 按钮链接的设置 */
+.siteslider-item>a{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    /* 没点击时的背景色 */
+    background-color:rgba(143, 138, 138, 0.3);
+    /* 按钮的间距 */
+    margin: 0 5px;
+    border-radius:50% ;
+    /* 边框颜色 */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    
+}
+/* 按钮链接的hover */
+.siteslider-item>a:hover{
+    background-color: blanchedalmond;
+}
+
+/* 向导样式开始*/
+/* 与轮播图的距离 */
+.contentsub{
+    margin-top: 18px;
+    /* 因为有浮动，所以使用hiddden不会丢失高度，与clearfix相同道理 */
+    overflow: hidden;
+}
+/* 向导左边设置 */
+.contentsub .contentchannel{
+    float: left;
+    /* 与轮播图左侧相同宽度 */
+    width: 234px;
+} 
+/* 向导左边列表设置 */
+.contentsub .contentchannel ul{
+    background-color: #5f5750;
+    font-size: 12px;
+    /* 字体置中 */
+    text-align: center;
+}
+.contentsub .contentchannel ul li{
+    /* 必须先清除浮动 */
+    float: left;
+    width: 78px;
+    height: 85px;
+}
+/* 向导左边链接的设置 */
+.contentsub .contentchannel ul li a{
+    display: block;
+    color: white;
+    padding-top: 18px;
+}
+/* 向导左边图片的设置 */
+.contentsub .contentchannel ul li a i{
+    display: block;
+    font-size: 24px;
+}
+/* 向导右边设置 */
+.contentsub .contentlist{
+    float: left;
+    width: 992px;
+}
+.contentsub .contentlist ul{
+    width: 992px;
+}
+/* 向导右边的列表设置 */
+.contentsub .contentlist ul li{
+    float: left;
+    width: 33.33%;
+    /* 使得图片有间隔 */
+    text-align: right;
+}
+/* 向导右边三个图的链接设置 */
+.contentsub .contentlist ul li a{
+    display: block;
+    height: 170px;
+}
+/* 对向导右边三图宽度进行设置 */
+.contentsub .contentlist ul li a img{
+    width: 316px;
+    height: 170px;
+    
+}
+/* 向导样式结束 */
+/* 长图设置 */
+.contentbanner{
+    margin-top: 18px;
+    margin-bottom: 30px;
+}
+.contentbanner a{
+    display: block;
+    width: 1226px;
+    height: 120px;
+}
+.contentbanner a img{
+    display: block;
+    width: 1226px;
+    height: 120px;
+}
+/* 小米主页内容结束 */
+
+
+
+
+/* 小米内容描述开始 */
+/* 内容描述整体设置 */
+.detailscontent{
+    padding-top: 22px;
+    background-color: #f5f5f5;
+}
+
+/* 内容标题开始 */
+/* 手机与更多内容的整体设置 */
+.detailscontent .boxhd{
+    height: 58px;
+    position: relative;
+}
+/* h2手机的设置 */
+.detailscontent .boxhd h2{
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 58px;
+    color: #333;
+}
+/* 更多内容的设置 */
+.detailscontent .boxhd .more{
+    position: absolute;
+    /* 使其靠近右上角 */
+    right: 0;
+    top: 0;
+}
+/* 更多内容的链接设置 */
+.detailscontent .boxhd .more a{
+    font-size: 16px;
+    line-height: 58px;
+    color: #424242;
+}
+/* 更多内容的链接鼠标悬浮颜色设置 */
+.detailscontent .boxhd .more a:hover{
+    color: #ff6700;
+}
+/* 内容标题结束 */
+
+/* 内容详情开始 */
+/* 左边设置 */
+.detailscontent .boxbd .row1{
+    float: left;
+    width: 234px;
+}
+/* 左边链接设置 */
+.detailscontent .boxbd .row1 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 左边图片设置 */
+.detailscontent .boxbd .row1 a img
+{
+    width: 234px;
+    height: 614px;
+}
+/* 右边内容设置 */
+.detailscontent .boxbd .row2{
+    float: left;
+    width: 992px;
+}
+
+.detailscontent .boxbd .row2 ul{
+    /* li标签并排显示必须清除浮动 */
+    overflow: hidden;
+}
+/* 标签整体设置 */
+.detailscontent .boxbd .row2 ul li{
+    float: left;
+    height: 260px;
+    /* 父级宽度设置一下，不然会随子级变化 */
+    width: 234px;
+    padding: 20px 0;
+    background-color: #fff;
+    position: relative;
+    /* 各个列表之间的间距设置 */
+    margin-left: 14px;
+    margin-bottom:14px;
+}
+/* 列表图片的全部设置 */
+.detailscontent .boxbd .row2 ul li .figure{
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 18px;
+}
+.detailscontent .boxbd .row2 ul li .figure a{
+    display: block;
+}
+.detailscontent .boxbd .row2 ul li .figure a img{
+    width: 160px;
+    height: 160px;
+}
+/* 列表标题设置 */
+.boxbd .row2 ul li .title{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+.boxbd .row2 ul li .title a{
+    color: #333;
+}
+/* 列表提示内容 */
+.boxbd .row2 ul li .desc{
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    color: #b0b0b0;
+    margin: 0 10px 10px;
+    /* 文本超出的范围进行隐藏 */
+    overflow: hidden;
+    /* 不允许换行 */
+    white-space: nowrap;
+    /*  超出文本省略号显示*/
+    text-overflow: ellipsis;
+}
+/* 价格设置 */
+.boxbd .row2 ul li .price{
+    text-align: center;
+    color: #ff6700;
+}
+/* 小标签设置，新网站没有 */
+.boxbd .row2 ul li .flag{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 20px;
+    background-color: #83c44e;
+    text-align: center;
+    color: #fff;
+    left: 50%;
+    /* 对盒模型计算使其位于正中间 */
+    margin-left: -32px;
+}
+/* 内容详情结束 */
+/* 小米内容描述结束*/
+
+
+
+
+/* 脚部栏开始 */
+/* 上面部分 */
+.footer .footerservice{
+    /* 给内容设置上下空隙距离 */
+    padding: 27px 0;
+    /* 一条灰色的线间隔 */
+    border-bottom: 1px solid #e0e0e0;
+}
+/* 列表细节设置 */
+.footer .footerservice ul li{
+    float: left;
+    width: 19%;
+    height: 25px;
+    line-height: 25px; 
+    font-size: 16px;
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+}
+/* 使得列表第一个左边没有灰色线 */
+.footer .footerservice ul li.first{
+    border-left: 0;
+}
+/* 列表链接颜色 */
+.footer .footerservice ul li a{
+    color: #616161;
+}
+/* 对图标的设置 */
+.footer .footerservice ul li .iconfont{
+    font-size: 25px;
+    /* 设置文字距离 */
+    margin-right: 3px;
+    /* 与文字对齐 */
+    vertical-align: -4px;
+}
+
+/* 下面部分的整体设置 */
+.footer .footerlinks{
+    padding: 40px 0;
+}
+/* 自定义标签的设置 */
+.footer .footerlinks dl{
+    float: left;
+    width: 160px;
+    height: 112px;
+}
+.footer .footerlinks dl dt{
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #424242;
+}
+.footer .footerlinks dl dd{
+    font-size: 12px;
+    margin-top: 10px;
+    color: #757575;
+    cursor: pointer;
+}
+/* 右边联系方式设置 */
+.footer .footerlinks .colcontact{
+    float: right;
+    width: 251px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+    text-align:center;
+}
+/* 电话的设置 */
+.footer .footerlinks .colcontact .iphone{
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: #ff6700;
+}、
+/* 电话下方文字设置 */
+.footer .footerlinks .colcontact p{
+    margin-bottom: 16px;
+    color: 12px
+    ;
+}
+/* 人工客服的设置 */
+.footer .footerlinks .colcontact a{
+    /* 必须是块元素才能设置宽高 */
+    display: inline-block;
+    width: 118px;
+    height: 28px;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    font-size: 12px;
+}
+.footer .footerlinks .colcontact a:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+/* 脚部栏结束 */
+
+/* 父元素中有子元素，并且父元素没有设置高度，子元素在父元素中浮动，结果必然是父元素的高度为0，这也就导致了父元素高度塌陷问题。
+浮动脱离文档流，这个问题会对整个页面布局带来很大影响，如何解决高度坍塌问题，我们需要清除浮动。 */
+.clearfix::after{
+    content: '';
+    clear:both;
+    display: block;
+}

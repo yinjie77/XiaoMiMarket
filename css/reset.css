@@ -1,0 +1,22 @@
+/* dl与dt是自定义列表的标签 */
+body,p,ul,ol,dl,dt,h1,h2,h3,h4,h5,h6,dl,dd,dt{
+    /* Margin(外边距) - 清除边框外的区域，外边距是透明的 */
+    margin: 0;
+    /* Padding(内边距) - 清除内容周围的区域，内边距是透明的 */
+    padding: 0;
+}
+
+ul,ol{
+    /* list-style-type属性指定列表项标记的类型 */
+    list-style: none;
+}
+input{
+    /* CSS表格边框，使用border属性 */
+    border: none;
+    /* CSS outline 属性规定元素轮廓的样式、颜色和宽度 */
+    outline: none;
+}
+a{
+    /* 从设计的角度看 text-decoration属性主要是用来删除链接的下划线 */
+    text-decoration: none;
+}
